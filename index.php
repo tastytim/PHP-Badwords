@@ -2,10 +2,7 @@
 // Creare una variabile con un paragrafo di testo a vostra scelta.
 $xParagrafo="Una variabile con un paragrafo.";
 // Una parola da censurare viene passata dall’utente tramite parametro GET.
-$name = $_GET["firstName"];
-echo $name;
-var_dump($name);
-
+$name = substr_replace($GET["variabile"] , "***", 0);
 
 ?>
 
@@ -23,7 +20,7 @@ var_dump($name);
             <!-- Stampare a schermo il paragrafo e la sua lunghezza. -->
             <p><?php echo $xParagrafo . " Length = " .strlen($xParagrafo)?></p>
             <!-- Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre asterischi (***) tutte le occorrenze della parola da censurare. -->
-            <p><?php echo $name ?></p>
+            <p><?php echo $name . " Length = " . strlen($name) ?></p>
         </main>
         <footer></footer>
     </body>
